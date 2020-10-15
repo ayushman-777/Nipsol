@@ -1,170 +1,92 @@
-<!doctype html>
-<html lang="en">
+<div id="headBar">
 
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <title>Nipsol</title>
-    <style>
-        @font-face {
-            font-family: 'Fredoka One';
-            font-style: normal;
-            font-weight: 400;
-
-            font-display: swap;
-            src: local('Fredoka One'), local('FredokaOne-Regular'), url(https://fonts.gstatic.com/s/fredokaone/v8/k3kUo8kEI-tA1RRcTZGmTlHGCac.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-
-        #headBar {
-            font-family: 'Fredoka One';
-            color: white;
-            background-color: #323433;
-            display: flex;
-            flex-direction: column-reverse;
-            margin: 0px;
-            height: 140px;
-            padding: 14px;
-        }
-
-        #linkBar {
-            color: white;
-            background-color: #9E6DF7;
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
-            padding: 3px;
-        }
-
-        a {
-            margin: 0px 10px;
-            color: white;
-        }
-
-        #userDetails {
-            margin: 5% 10%;
-        }
-
-        .abc {
-            display: flex;
-            justify-content: flex-start;
-        }
-
-        .abc>* {
-            margin-right: 20px;
-        }
-
-        .row {
-            width: 65%;
-            margin-left: 30%;
-        }
-
-        button {
-            width: 40%;
-            padding: 4px !important;
-        }
-
-        .btn-purple {
-            background-color: #9E6DF7;
-        }
-    </style>
-
-</head>
-
-<body>
-
-
-    <div id="headBar">
-
-        <h4>CONTACTLESS ORDERING </h4>
-        <h1>nipsol</h1>
-    </div>
-    <div id="linkBar">
-        <a target="_blank" href="http://www.nipsol.com">www.nipsol.com</a>
+    <h4>CONTACTLESS ORDERING </h4>
+    <h1>nipsol</h1>
+</div>
+<div id="linkBar">
+    <div>
         <img src="https://trello-attachments.s3.amazonaws.com/5f7bd0b923daee5e9a63b3d3/5f7bd0b923daee5e9a63b3e6/x/8798f7c5935a2500d83ad956ee95eb33/nipsol_favicon.png"
-            alt="">
+             alt="">
+        <a target="_blank" href="http://www.nipsol.com">www.nipsol.com</a>
+
     </div>
+    <div>
+        <li class="item"><a href="#"> Home</a></li>
+        <li class="item"><a href="#"> +Add User</a></li>
+    </div>
+</div>
 
-    <section id="userDetails">
-        <div>
-            <h3>User Registration</h3>
+<section id="userDetails">
+    <div>
+        <h3>User Registration</h3>
+    </div>
+    <form>
+        <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name">
+            </div>
         </div>
-        <form>
-            <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label">Name</label>
-                <div class="col-sm-10">
-                    <input type="name" class="form-control" id="name">
-                </div>
-            </div>
 
-            <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3">
-                </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3">
             </div>
+        </div>
 
-            <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label">Phone</label>
-                <div class="col-sm-10">
-                    <input type="name" class="form-control" id="name">
-                </div>
+        <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">Phone</label>
+            <div class="col-sm-10">
+                <input type="tel" class="form-control" id="phone">
             </div>
+        </div>
 
-            <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label">Address</label>
-                <div class="col-sm-10">
-                    <input type="name" class="form-control" id="name">
-                </div>
+        <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">Address</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="address">
             </div>
+        </div>
 
-            <fieldset class="form-group">
-                <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
-                    <div class="col-sm-10 abc">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                value="option1" checked>
-                            <label class="form-check-label" for="gridRadios1">
-                                Male
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                                value="option2">
-                            <label class="form-check-label" for="gridRadios2">
-                                Female
-                            </label>
-                        </div>
+        <fieldset class="form-group">
+            <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                <div class="col-sm-10 abc">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                               value="option1" checked>
+                        <label class="form-check-label" for="gridRadios1">
+                            Male
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                               value="option2">
+                        <label class="form-check-label" for="gridRadios2">
+                            Female
+                        </label>
                     </div>
                 </div>
-
-            </fieldset>
-
-            <div class="form-group row abc">
-                <button type="reset" class="btn btn-dark btn-lg">RESET</button>
-                <button type="submit" class="btn btn-purple btn-lg">SUBMIT</button>
             </div>
-        </form>
 
-    </section>
+        </fieldset>
+
+        <div class="form-group row abc">
+            <button type="reset" class="btn btn-dark btn-lg">RESET</button>
+            <button type="submit" class="btn btn-purple btn-lg">SUBMIT</button>
+        </div>
+    </form>
+
+</section>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-</body>
-
-</html>
