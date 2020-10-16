@@ -11,8 +11,22 @@
 
   </div>
   <div>
-    <li (click)="atHome = true;atAddUser = false" [style] = "{backgroundColor: atHome ? 'red' :  'blue'}" class="item"><a href="#"> Home</a></li>
-    <li (click)="atHome = false;atAddUser = true" class="item" [style] = "{backgroundColor: atAddUser ? 'red' :  'blue'}"><a href="#"> +Add User</a></li>
+    <li (click)="atHome = true;atAddUser = false"
+        class="item" id="homeClick">
+<!--        [style] = "{backgroundColor: atHome ? 'red' :  'blue'}" -->
+    
+      <a href="#"> Home</a>
+      <div *ngIf="atHome" class = "triangle-up-home"></div>
+    </li>
+
+    <li (click)="atHome = false;atAddUser = true"
+        class="item" id="addUserClick">
+<!--        [style] = "{backgroundColor: atAddUser ? 'red' :  'blue'}" -->
+    
+      <a href="#"> +Add User</a>
+      <div *ngIf="atAddUser" class = "triangle-up-addUser"></div>
+    </li>
+<!--    [class.triangle-up]="atHome"-->
   </div>
 </div>
 
