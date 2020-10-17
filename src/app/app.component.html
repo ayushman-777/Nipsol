@@ -1,32 +1,35 @@
 <div id="headBar">
 
-  <h4>CONTACTLESS ORDERING </h4>
-  <h1>nipsol</h1>
+<!--  <h4 *ngIf="!atAddUser">CONTACTLESS ORDERING </h4>-->
+<!--  <h1 *ngIf="!atAddUser">nipsol</h1>-->
+  <h4 class="form-control" *ngIf="currUserName">{{currUserName}}</h4>
+  <h1>Hello</h1>
 </div>
 <div id="linkBar">
   <div>
-    <img src="https://trello-attachments.s3.amazonaws.com/5f7bd0b923daee5e9a63b3d3/5f7bd0b923daee5e9a63b3e6/x/8798f7c5935a2500d83ad956ee95eb33/nipsol_favicon.png"
-         alt="">
+    <img
+      src="https://trello-attachments.s3.amazonaws.com/5f7bd0b923daee5e9a63b3d3/5f7bd0b923daee5e9a63b3e6/x/8798f7c5935a2500d83ad956ee95eb33/nipsol_favicon.png"
+      alt="">
     <a target="_blank" href="http://www.nipsol.com">www.nipsol.com</a>
 
   </div>
   <div>
     <li (click)="atHome = true;atAddUser = false"
         class="item" id="homeClick">
-<!--        [style] = "{backgroundColor: atHome ? 'red' :  'blue'}" -->
-    
+      <!--        [style] = "{backgroundColor: atHome ? 'red' :  'blue'}" -->
+
       <a href="#"> Home</a>
-      <div *ngIf="atHome" class = "triangle-up-home"></div>
+      <div *ngIf="atHome" class="triangle-up-home"></div>
     </li>
 
     <li (click)="atHome = false;atAddUser = true"
         class="item" id="addUserClick">
-<!--        [style] = "{backgroundColor: atAddUser ? 'red' :  'blue'}" -->
-    
+      <!--        [style] = "{backgroundColor: atAddUser ? 'red' :  'blue'}" -->
+
       <a href="#"> +Add User</a>
-      <div *ngIf="atAddUser" class = "triangle-up-addUser"></div>
+      <div *ngIf="atAddUser" class="triangle-up-addUser"></div>
     </li>
-<!--    [class.triangle-up]="atHome"-->
+    <!--    [class.triangle-up]="atHome"-->
   </div>
 </div>
 
@@ -38,7 +41,7 @@
     <div class="form-group row">
       <label for="name" class="col-sm-2 col-form-label">Name</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="name">
+        <input type="text" class="form-control" name="text" id="name" [(ngModel)]="currUserName">
       </div>
     </div>
 
@@ -50,14 +53,14 @@
     </div>
 
     <div class="form-group row">
-      <label for="name" class="col-sm-2 col-form-label">Phone</label>
+      <label for="phone" class="col-sm-2 col-form-label">Phone</label>
       <div class="col-sm-10">
         <input type="tel" class="form-control" id="phone">
       </div>
     </div>
 
     <div class="form-group row">
-      <label for="name" class="col-sm-2 col-form-label">Address</label>
+      <label for="address" class="col-sm-2 col-form-label">Address</label>
       <div class="col-sm-10">
         <input type="text" class="form-control" id="address">
       </div>

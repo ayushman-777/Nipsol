@@ -124,3 +124,10 @@ div img {
   bottom: 0;
   left: 188px;
   }
+
+#headBar h4 {
+  width: 15%;
+  font-size: 20px;
+  padding-left: 15px;
+  overflow: hidden;
+}
