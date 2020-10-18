@@ -1,4 +1,5 @@
 import { Component, VERSION } from '@angular/core';
+import {GlobalConstants} from "./Common/globalConstant";
 
 @Component({
   selector: 'my-app',
@@ -7,7 +8,5 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular ' + VERSION.major;
-  atAddUser = false;
-  atHome = true;
-   currUserName = '';
+  currUserName = GlobalConstants.currUserName;
 }
