@@ -1,4 +1,4 @@
 export class GlobalConstants {
 
-    static currUserName: 'kamal';
+    public static currUserName: 'kamal';
 }

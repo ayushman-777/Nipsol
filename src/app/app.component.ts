@@ -1,5 +1,6 @@
 import { Component, VERSION } from '@angular/core';
-import {GlobalConstants} from "./Common/globalConstant";
+import { GlobalConstants } from './Common/globalConstant';
+
 
 @Component({
   selector: 'my-app',
