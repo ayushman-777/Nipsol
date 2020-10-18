@@ -8,5 +8,5 @@ import {GlobalConstants} from "./Common/globalConstant";
 })
 export class AppComponent  {
   name = 'Angular ' + VERSION.major;
-  currUserName = GlobalConstants.currUserName;
+  currUserNameHome = GlobalConstants.currUserName;
 }
