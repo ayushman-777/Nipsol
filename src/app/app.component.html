@@ -19,7 +19,7 @@
       <!--        [style] = "{backgroundColor: atHome ? 'red' :  'blue'}" -->
 
       <a routerLink="" routerLink="/home"> Home</a>
-      <div class="triangle-up-home"></div>
+      <div class="triangle-up-home" *ngIf="router.url === '/home'"></div>
     </li>
 
     <li
@@ -27,7 +27,7 @@
       <!--        [style] = "{backgroundColor: atAddUser ? 'red' :  'blue'}" -->
 
       <a routerLink="/addUser"> +Add User</a>
-      <div class="triangle-up-addUser"></div>
+      <div class="triangle-up-addUser" *ngIf="router.url === '/addUser'"></div>
     </li>
     <!--    [class.triangle-up]="atHome"-->
   </div>
