@@ -1,6 +1,5 @@
 import { Component, VERSION } from '@angular/core';
 import { Router } from '@angular/router';
-import { GlobalConstants } from './Common/globalConstant';
 
 
 @Component({
@@ -10,6 +9,6 @@ import { GlobalConstants } from './Common/globalConstant';
 })
 export class AppComponent  {
   name = 'Angular ' + VERSION.major;
-  currUserNameHome = GlobalConstants.currUserName;
+  currUserNameHome = '';
   constructor(public router: Router){}
 }

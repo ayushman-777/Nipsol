@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {GlobalConstants} from "../Common/globalConstant";
 
 @Component({
   selector: 'app-add-user',
@@ -7,7 +6,7 @@ import {GlobalConstants} from "../Common/globalConstant";
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent implements OnInit {
-  currUserName = GlobalConstants.currUserName;
+  currUserName = '';
   constructor() {
   }
 
