@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {DataService} from "./data.service";
 
 @Component({
   selector: 'app-add-user',
@@ -6,11 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent implements OnInit {
-  currUserNameUser = '';
-  constructor() {
-  }
+  currUserNameUser:string;
+  constructor(private data: DataService) {  }
 
   ngOnInit() {
+    this.data.currUserName
+        .subscribe(message =>
+            this.currUserNameUser = message);
   }
-
 }
