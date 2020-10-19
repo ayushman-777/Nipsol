@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-add-user',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent implements OnInit {
-  public currUserNameUser = '';
+  currUserNameUser = '';
   constructor() {
   }
 
