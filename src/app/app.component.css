@@ -121,6 +121,17 @@ div img {
   left: 188px;
   }
 
+.triangle-up-allUser {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+  position: absolute;
+  bottom: 0;
+  left: 320px;
+  }
+
 #headBar h4 {
   width: 15%;
   font-size: 20px;

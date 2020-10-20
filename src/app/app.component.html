@@ -19,7 +19,7 @@
         class="item" id="homeClick">
       <!--        [style] = "{backgroundColor: atHome ? 'red' :  'blue'}" -->
 
-      <a routerLink="" routerLink="/home"> Home</a>
+      <a routerLink="" routerLink="/home"> HOME</a>
       <div class="triangle-up-home" *ngIf="(router.url === '/home') || (router.url === '/')"></div>
     </li>
 
@@ -27,12 +27,16 @@
         class="item" id="addUserClick">
       <!--        [style] = "{backgroundColor: atAddUser ? 'red' :  'blue'}" -->
 
-      <a routerLink="/addUser"> +Add User</a>
+      <a routerLink="/addUser"> +ADD USER</a>
       <div class="triangle-up-addUser" *ngIf="(router.url === '/addUser')"></div>
     </li>
     <!--    [class.triangle-up]="atHome"-->
 
-
+    <li
+            class="item" id="allUserClick">
+      <a routerLink="/allUser"> +ALL USER</a>
+      <div class="triangle-up-allUser" *ngIf="(router.url === '/allUser')"></div>
+    </li>
 
   </div>
 </div>
