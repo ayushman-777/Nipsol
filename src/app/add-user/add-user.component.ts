@@ -15,4 +15,8 @@ export class AddUserComponent implements OnInit {
         .subscribe(message =>
             this.currUserNameUser = message);
   }
+newMessage(name:string) {
+    this.data.changeName(name);
+  }
+
 }
