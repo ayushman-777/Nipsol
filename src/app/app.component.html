@@ -3,7 +3,7 @@
 <!--  <h4 *ngIf="!atAddUser">CONTACTLESS ORDERING </h4>-->
 <!--  <h1 *ngIf="!atAddUser">nipsol</h1>-->
   <input class="form-control" [(ngModel)]="currUserNameHome" 
-  (input)="newMessage($event.target.value)">
+  (ngModelChange)="newMessage($event)">
   <h1>Hello</h1>
 </div>
 <div id="linkBar">
