@@ -8,7 +8,7 @@
 			<div class="col-sm-10">
 				<input type="text" class="form-control" name="text" id="name" formControlName="name"
                 [(ngModel)]="currUserNameUser" (ngModelChange)="newMessage($event)">
-                <div *ngIf="name.touched && name.errors?.required">
+                <div *ngIf="name.touched && currUserNameUser===''">
                     Name can't be left empty.
                 </div>
             </div>
@@ -17,8 +17,8 @@
 			<div class="form-group row">
 				<label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
 				<div class="col-sm-10">
-					<input type="email" class="form-control" id="inputEmail3" formControlName="email" required >
-                    <div *ngIf="email.errors.required">
+					<input type="email" class="form-control" id="inputEmail3" [(ngModel)]="currUserEmailUser" formControlName="email" required >
+                    <div *ngIf="email.touched && currUserEmailUser===''">
                         Email can't be left empty.
                     </div>
             </div>
@@ -27,8 +27,11 @@
 				<div class="form-group row">
 					<label for="phone" class="col-sm-2 col-form-label">Phone</label>
 					<div class="col-sm-10">
-						<input type="tel" class="form-control" id="phone"  formControlName="tel">
-						<div *ngIf="tel.errors.required">
+						<input type="tel" class="form-control" id="phone" [(ngModel)]="currUserPhoneUser"   formControlName="tel">
+						<div *ngIf="tel.touched && currUserPhoneUser===''">
+							Phone can't be left empty.
+						</div>
+            <div *ngIf="tel.touched && currUserPhoneUser.length===10">
 							Phone can't be left empty.
 						</div>
 					</div>
@@ -38,8 +41,8 @@
 				<div class="form-group row">
 					<label for="address" class="col-sm-2 col-form-label">Address</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="address"  formControlName="address">
-                        <div *ngIf="address.errors.required">
+						<input type="text" class="form-control" id="address" [(ngModel)]="currUserAddressUser"  formControlName="address">
+                        <div *ngIf="address.touched && currUserAddressUser===''">
                             Address can't be left empty.
                         </div>
             </div>

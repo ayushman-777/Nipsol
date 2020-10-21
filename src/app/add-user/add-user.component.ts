@@ -9,6 +9,9 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class AddUserComponent implements OnInit {
   currUserNameUser:string;
+  currUserPhoneUser:string;
+  currUserEmailUser:string;
+  currUserAddressUser:string;
   profileForm = new FormGroup({
     name: new FormControl(''),
     email: new FormControl(''),
