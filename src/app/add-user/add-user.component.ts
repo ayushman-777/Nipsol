@@ -15,6 +15,7 @@ export class AddUserComponent implements OnInit {
     address: new FormControl(''),
     tel: new FormControl('',[Validators.min(10), Validators.required])
   });
+
   onSubmit() {
     // TODO: Use EventEmitter with form value
     console.warn(this.profileForm.value);
@@ -29,5 +30,8 @@ export class AddUserComponent implements OnInit {
 newMessage(name:string) {
     this.data.changeName(name);
   }
-
+  get name() { return this.profileForm.get('name'); }
+  get email() { return this.profileForm.get('email'); }
+  get tel() { return this.profileForm.get('tel'); }
+  get address() { return this.profileForm.get('address'); }
 }
