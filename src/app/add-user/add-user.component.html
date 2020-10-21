@@ -72,7 +72,7 @@
           required
         />
         <div
-          *ngIf="address.touched && currUserAddressUser===''"
+          *ngIf="address.touched && address.errors.required && currUserAddressUser===''"
           class="alertMSG"
         >
           Address can't be left empty.
