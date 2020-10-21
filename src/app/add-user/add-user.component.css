@@ -1,30 +1,32 @@
-
 #userDetails {
-    margin: 5% 10%;
-    font-family: Arial, Helvetica, sans-serif;
-    /*font-size: 1.5rem;*/
+  margin: 5% 10%;
+  font-family: Arial, Helvetica, sans-serif;
+  /*font-size: 1.5rem;*/
 }
 
 .abc {
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .abc > * {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .row {
-    width: 65%;
-    margin-left: 30%;
+  width: 65%;
+  margin-left: 30%;
 }
 
 button {
-    width: 40%;
-    padding: 4px !important;
+  width: 40%;
+  padding: 4px !important;
 }
 
 .btn-purple {
-    background-color: #9E6DF7;
+  background-color: #9e6df7;
 }
 
+.alert {
+  color: red;
+}
