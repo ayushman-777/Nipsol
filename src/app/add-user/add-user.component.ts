@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from "./data.service";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-add-user',
@@ -8,7 +9,17 @@ import {DataService} from "./data.service";
 })
 export class AddUserComponent implements OnInit {
   currUserNameUser:string;
-  constructor(private data: DataService) {  }
+  profileForm = new FormGroup({
+    name: new FormControl(''),
+    email: new FormControl('', Validators.required),
+    address: new FormControl(''),
+    tel: new FormControl('')
+  });
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.profileForm.value);
+  }
+  constructor(private data: DataService, private fb: FormBuilder) {  }
 
   ngOnInit() {
     this.data.currUserName
