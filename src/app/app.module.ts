@@ -7,8 +7,8 @@ import {AppRoutingModule, routingComponents} from "./appRouting.module";
 import {DataService} from "./add-user/data.service";
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule ],
   declarations: [ AppComponent, routingComponents],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule ],
   providers: [DataService],
   bootstrap:    [ AppComponent ]
 })
