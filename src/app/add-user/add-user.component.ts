@@ -13,7 +13,7 @@ export class AddUserComponent implements OnInit {
     name: new FormControl(''),
     email: new FormControl('', Validators.required),
     address: new FormControl(''),
-    tel: new FormControl('')
+    tel: new FormControl('',[Validators.min(10), Validators.required])
   });
   onSubmit() {
     // TODO: Use EventEmitter with form value
