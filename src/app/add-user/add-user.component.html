@@ -27,11 +27,11 @@
 				<div class="form-group row">
 					<label for="phone" class="col-sm-2 col-form-label">Phone</label>
 					<div class="col-sm-10">
-						<input type="tel" class="form-control" id="phone" [(ngModel)]="currUserPhoneUser"   formControlName="tel">
+						<input type="tel" class="form-control" id="phone" [(ngModel)]="currUserPhoneUser" minlength="10"  formControlName="tel">
 						<div *ngIf="tel.touched && currUserPhoneUser===''">
 							Phone can't be left empty.
 						</div>
-            <div *ngIf="tel.touched && tel.length===10">
+            <div *ngIf="tel.touched && tel.errors.minlength">
 						  Invalid Mobile Number.
 						</div>
 					</div>
