@@ -16,7 +16,7 @@
           (ngModelChange)="newMessage($event)"
           required
         />
-        <div *ngIf="name.touched && name.errors.required" class="alertMSG">
+        <div *ngIf="name.touched && name.errors?.required" class="alertMSG">
           Name can't be left empty.
         </div>
       </div>
@@ -33,7 +33,7 @@
           formControlName="email"
           required
         />
-        <div *ngIf="email.touched && email.errors.required" class="alertMSG">
+        <div *ngIf="email.touched && email.errors?.required" class="alertMSG">
           Email can't be left empty.
         </div>
       </div>
@@ -51,10 +51,10 @@
           formControlName="tel"
           required
         />
-        <div *ngIf="tel.touched && tel.errors.required" class="alertMSG">
+        <div *ngIf="tel.touched && tel.errors?.required" class="alertMSG">
           Phone can't be left empty.
         </div>
-        <div *ngIf="tel.touched && tel.errors.minlength" class="alertMSG">
+        <div *ngIf="tel.touched && tel.errors?.minlength" class="alertMSG">
           Invalid Mobile Number.
         </div>
       </div>
@@ -72,7 +72,7 @@
           required
         />
         <div
-          *ngIf="address.touched && address.errors.required && currUserAddressUser===''"
+          *ngIf="address.touched && address.errors?.required"
           class="alertMSG"
         >
           Address can't be left empty.
