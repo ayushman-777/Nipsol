@@ -31,8 +31,8 @@
 						<div *ngIf="tel.touched && currUserPhoneUser===''">
 							Phone can't be left empty.
 						</div>
-            <div *ngIf="tel.touched && currUserPhoneUser.length===10">
-							Phone can't be left empty.
+            <div *ngIf="tel.touched && tel.length===10">
+						  Invalid Mobile Number.
 						</div>
 					</div>
 
