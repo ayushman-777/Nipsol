@@ -33,7 +33,7 @@
           formControlName="email"
           required
         />
-        <div *ngIf="email.touched && currUserEmailUser===''" class="alert">
+        <div *ngIf="email.touched && email.errors.required" class="alert">
           Email can't be left empty.
         </div>
       </div>
@@ -49,8 +49,9 @@
           [(ngModel)]="currUserPhoneUser"
           minlength="10"
           formControlName="tel"
+          required
         />
-        <div *ngIf="tel.touched && currUserPhoneUser===''">
+        <div *ngIf="tel.touched && tel.errors.required">
           Phone can't be left empty.
         </div>
         <div *ngIf="tel.touched && tel.errors.minlength" class="alert">
