@@ -11,7 +11,7 @@ export class AddUserComponent implements OnInit {
   currUserNameUser:string;
   profileForm = new FormGroup({
     name: new FormControl(''),
-    email: new FormControl('', Validators.required),
+    email: new FormControl(''),
     address: new FormControl(''),
     tel: new FormControl('',[Validators.min(10), Validators.required])
   });
