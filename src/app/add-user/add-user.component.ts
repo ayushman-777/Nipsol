@@ -6,6 +6,7 @@ import {
     FormGroup,
     Validators
 } from "@angular/forms";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
     selector: "app-add-user",
@@ -24,13 +25,16 @@ export class AddUserComponent implements OnInit {
 
     onSubmit() {
 
-      this.data.pushDetails(this.name.value, this.email.value, this.tel.value, this.address.value )
-      console.log(this.profileForm.value);
-      console.warn(this.name.value, this.email.value, this.tel.value, this.address.value);
-      this.profileForm.reset();
+        let tempData: any = this.profileForm.value;
+        this.router.navigate(['./allUser'],{
+            queryParams:{data:JSON.stringify(tempData)}
+        })
+        console.warn(this.name.value, this.email.value, this.tel.value, this.address.value);
     }
 
-    constructor(private data: DataService, private fb: FormBuilder) {
+    constructor(private data: DataService,
+                private router: Router,
+                private route: ActivatedRoute) {
     }
 
     ngOnInit() {
