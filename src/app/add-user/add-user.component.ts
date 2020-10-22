@@ -14,9 +14,7 @@ import {
 })
 export class AddUserComponent implements OnInit {
     currUserNameUser: string;
-    currUserPhoneUser: string;
-    currUserEmailUser: string;
-    currUserAddressUser: string;
+
     profileForm = new FormGroup({
         name: new FormControl(""),
         email: new FormControl(""),
@@ -26,7 +24,10 @@ export class AddUserComponent implements OnInit {
 
     onSubmit() {
 
-        console.log(this.profileForm.value);
+      this.data.pushDetails(this.name.value, this.email.value, this.tel.value, this.address.value )
+      console.log(this.profileForm.value);
+      console.log(this.name.value, this.email.value, this.tel.value, this.address.value);
+      this.profileForm.reset();
     }
 
     constructor(private data: DataService, private fb: FormBuilder) {
