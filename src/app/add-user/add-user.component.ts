@@ -26,7 +26,7 @@ export class AddUserComponent implements OnInit {
 
       this.data.pushDetails(this.name.value, this.email.value, this.tel.value, this.address.value )
       console.log(this.profileForm.value);
-      console.log(this.name.value, this.email.value, this.tel.value, this.address.value);
+      console.warn(this.name.value, this.email.value, this.tel.value, this.address.value);
       this.profileForm.reset();
     }
 
