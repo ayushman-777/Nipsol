@@ -8,7 +8,7 @@ import {DataService} from "./add-user/data.service";
 import { CovidMeterComponent } from './covid-meter/covid-meter.component';
 
 @NgModule({
-  declarations: [ AppComponent, routingComponents, CovidMeterComponent],
+  declarations: [ AppComponent, routingComponents],
   imports:      [ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule ],
   providers: [DataService],
   bootstrap:    [ AppComponent ]
