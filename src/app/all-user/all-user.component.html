@@ -1,10 +1,13 @@
-<div class="custom row">
-<div class="my-2 mx-2 card" *ngFor="let detail of userDetails; let i = index;">
-    <div class="card-body">
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" *ngFor="let detail of userDetails; let i = index;">
+      <div class="card-body">
         <h5 class="card-title">{{i+1}}.  {{detail.value.name}}</h5>
         <p class="card-text">{{detail.value.email}}</p>
         <p class="card-text">{{detail.value.tel}}=</p>
         <p class="card-text">{{detail.value.address}}</p>
     </div>
+</div>
 </div>
 </div>
