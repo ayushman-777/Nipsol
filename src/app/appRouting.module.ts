@@ -11,7 +11,8 @@ const routes: Routes = [
     {path: 'addUser', component: AddUserComponent},
     {path: '', component: HomeComponent},
     {path: 'home', component: HomeComponent},
-    {path: 'allUser', component: AllUserComponent}
+    {path: 'allUser', component: AllUserComponent},
+    {path: 'covidMeter', component: CovidMeter}
 ];
 
 @NgModule({
