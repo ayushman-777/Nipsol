@@ -8,18 +8,15 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./all-user.component.css']
 })
 export class AllUserComponent implements OnInit {
-  userDetails:any[];
+
   constructor(private router: Router,
               private route: ActivatedRoute) {
   }
 
   ngOnInit() {
     this.route.queryParams.subscribe((params)=>{
-      console.log(params);
-      this.userDetails.push(JSON.parse(params.userDetail));
+      console.log(params)
     })
   }
-  check(){
-    console.log(this.userDetails[0].email);
-  }
+
 }
