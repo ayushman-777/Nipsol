@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService} from "../add-user/data.service";
-import {ActivatedRoute, Router} from "@angular/router";
+import {SharedService} from "../shared.service";
 
 @Component({
   selector: 'app-all-user',
@@ -9,14 +8,14 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class AllUserComponent implements OnInit {
 
-  constructor(private router: Router,
-              private route: ActivatedRoute) {
+  userDetails = [];
+
+  constructor(private sharedService: SharedService) {
+    this.userDetails = sharedService.getDetails();
   }
 
   ngOnInit() {
-    this.route.queryParams.subscribe((params)=>{
-      console.log(params)
-    })
+
   }
 
 }

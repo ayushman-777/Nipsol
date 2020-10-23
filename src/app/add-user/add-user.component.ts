@@ -1,12 +1,12 @@
 import {Component, OnInit} from "@angular/core";
 import {DataService} from "./data.service";
 import {
-    FormBuilder,
     FormControl,
     FormGroup,
     Validators
 } from "@angular/forms";
-import {ActivatedRoute, Router} from "@angular/router";
+import { Router} from "@angular/router";
+import {SharedService} from "../shared.service";
 
 @Component({
     selector: "app-add-user",
@@ -25,16 +25,14 @@ export class AddUserComponent implements OnInit {
 
     onSubmit() {
 
-        let tempData: any = this.profileForm.value;
-        this.router.navigate(['./allUser'],{
-            queryParams:{data:JSON.stringify(tempData)}
-        })
-        console.warn(this.name.value, this.email.value, this.tel.value, this.address.value);
+        this.router.navigate(['./allUser']);
+        this.sharedService.addDetails(this.profileForm);
+        console.warn(this.profileForm.value);
     }
 
     constructor(private data: DataService,
                 private router: Router,
-                private route: ActivatedRoute) {
+                private sharedService: SharedService) {
     }
 
     ngOnInit() {

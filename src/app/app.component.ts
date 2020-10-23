@@ -9,7 +9,7 @@ import { DataService } from "./add-user/data.service";
 })
 export class AppComponent implements OnInit {
   name = "Angular " + VERSION.major;
-  currUserNameHome: string = "adsfas";
+  currUserNameHome: string = "";
 
   constructor(public router: Router, private data: DataService) {}
 
