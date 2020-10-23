@@ -15,31 +15,27 @@
 
   </div>
   <div>
-    <li
-        class="item" id="homeClick">
-      <!--        [style] = "{backgroundColor: atHome ? 'red' :  'blue'}" -->
-
+    <li class="item" id="homeClick">
       <a routerLink="" routerLink="/home"> HOME</a>
       <div class="triangle-up-home" *ngIf="(router.url === '/home') || (router.url === '/')"></div>
     </li>
 
-    <li
-        class="item" id="addUserClick">
-      <!--        [style] = "{backgroundColor: atAddUser ? 'red' :  'blue'}" -->
-
+    <li class="item" id="addUserClick">
       <a routerLink="/addUser"> +ADD USER</a>
       <div class="triangle-up-addUser" *ngIf="(router.url === '/addUser')"></div>
     </li>
-    <!--    [class.triangle-up]="atHome"-->
-
-    <li
-            class="item" id="allUserClick">
+  
+    <li class="item" id="allUserClick">
       <a routerLink="/allUser"> ALL USER</a>
       <div class="triangle-up-allUser" *ngIf="(router.url === '/allUser')"></div>
+    </li>
+
+     <li class="item" id="covidClick">
+      <a routerLink="/covidMeter"> COVID METER</a>
+      <div class="triangle-up-covidMeter" *ngIf="(router.url === '/covidMeter')"></div>
     </li>
 
   </div>
 </div>
 <router-outlet></router-outlet>
-<!--<app-add-user *ngIf="false" [currUserNameUser]="currUserNameHome"></app-add-user>-->
 
