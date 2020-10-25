@@ -14,9 +14,3 @@
   border-radius: 50%;
   display: inline-block;
 }
-
-.stats {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
