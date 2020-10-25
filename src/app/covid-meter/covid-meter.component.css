@@ -1,6 +1,7 @@
 .selectBar {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .selectBar > *{
@@ -15,6 +16,7 @@
 }
 
 .stats {
+  display: flex;
   align-items: center;
-
+  flex-direction: row;
 }
