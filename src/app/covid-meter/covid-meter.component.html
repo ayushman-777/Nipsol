@@ -6,8 +6,10 @@
     <option *ngFor="let country of Countries" value="{{country.Country}}">{{country.Country}}</option>
 
 </select>
-
+<span class="dot bg-primary"></span>
 <p>{{TotalCases.TotalConfirmed}}</p>
+<span class="dot bg-success"></span>
 <p>{{TotalCases.TotalDeaths}}</p>
+<span class="dot bg-danger"></span>
 <p>{{TotalCases.TotalRecovered}}</p>
 </div>

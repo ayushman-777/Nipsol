@@ -8,7 +8,7 @@ import {SharedService} from "../shared.service";
 })
 export class CovidMeterComponent implements OnInit {
 
-  public TotalCases;
+  public TotalCases:any;
   public Countries = [];
   constructor(private sharedService: SharedService) { }
 
