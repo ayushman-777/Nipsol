@@ -17,22 +17,22 @@
 
 <div class="casesTable">
     <table class="table table-bordered">
-        <thead class="casesTableFirst">
+        <thead>
         <tr class="table-dark">
-            <th scope="col">Date</th>
-            <th scope="col">Total Cases</th>
-            <th scope="col">Active</th>
-            <th scope="col">Recovered</th>
-            <th scope="col">Deaths</th>
+            <th scope="col" class="casesTableFirst">Date</th>
+            <th scope="col" class="casesTableFirst">Total Cases</th>
+            <th scope="col" class="casesTableFirst">Active</th>
+            <th scope="col" class="casesTableFirst">Recovered</th>
+            <th scope="col" class="casesTableFirst">Deaths</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let stat of stats; let i = index;">
-            <td>{{stat.Date}}</td>
-            <td>{{stat.Confirmed}}</td>
-            <td>{{stat.Active}}</td>
-            <td>{{stat.Recovered}}</td>
-            <td>{{stat.Deaths}}</td>
+            <td class="casesTableFirst">{{stat.Date}}</td>
+            <td class="casesTableFirst">{{stat.Confirmed}}</td>
+            <td class="casesTableFirst">{{stat.Active}}</td>
+            <td class="casesTableFirst">{{stat.Recovered}}</td>
+            <td class="casesTableFirst">{{stat.Deaths}}</td>
         </tr>
 
         </tbody>
