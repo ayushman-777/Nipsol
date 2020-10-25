@@ -14,3 +14,13 @@
   border-radius: 50%;
   display: inline-block;
 }
+
+.casesTable {
+  margin: 20px;
+  border: 1px solid black;
+}
+
+.casesTableFirst {
+  margin: 20px;
+  border: 1px solid black !important;
+}
