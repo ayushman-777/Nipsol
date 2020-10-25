@@ -14,7 +14,8 @@ export class SharedService {
   private userDetails: FormGroup[] = [];
   private urlForCases = 'https://api.covid19api.com/world/total';
   private urlForCountries = 'https://api.covid19api.com/countries';
-  private urlForCovidCase = 'https://api.covid19api.com/country/india';
+  private selectedCountry = 'india';
+  private urlForCovidCase = 'https://api.covid19api.com/country/' + this.selectedCountry;
 
   constructor(private http: HttpClient) { }
 
@@ -38,4 +39,8 @@ export class SharedService {
     return this.http.get<CountryStats[]>(this.urlForCovidCase);
   }
 
+  changeSelectCountry(country: string){
+    this.selectedCountry = country;
+    this.urlForCovidCase = 'https://api.covid19api.com/country/' + this.selectedCountry;
+  }
 }

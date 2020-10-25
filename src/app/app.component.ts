@@ -1,6 +1,7 @@
 import { Component, OnInit, VERSION } from "@angular/core";
 import { Router } from "@angular/router";
 import { DataService } from "./add-user/data.service";
+import { SharedService } from "./shared.service";
 
 @Component({
   selector: "my-app",
@@ -10,6 +11,7 @@ import { DataService } from "./add-user/data.service";
 export class AppComponent implements OnInit {
   name = "Angular " + VERSION.major;
   currUserNameHome: string = "";
+  
 
   constructor(public router: Router, private data: DataService) {}
 
@@ -17,6 +19,7 @@ export class AppComponent implements OnInit {
     this.data.currUserName.subscribe(
       message => (this.currUserNameHome = message)
     );
+
   }
 
   newMessage(name: string) {

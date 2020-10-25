@@ -1,7 +1,7 @@
 <div class="selectBar">
 <label for="country">Select Country</label>
 
-<select id="country">
+<select id="country" (ngModelChange)="myselection($event)">
 
     <option *ngFor="let country of Countries" value="{{country.Country}}">{{country.Country}}</option>
 

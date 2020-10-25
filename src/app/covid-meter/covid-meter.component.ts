@@ -20,4 +20,8 @@ export class CovidMeterComponent implements OnInit {
     this.sharedService.getCountryStats().subscribe(data=>this.stats = data);
   }
 
+  myselection(select: string){
+    this.sharedService.changeSelectCountry(select);
+  }
+
 }
