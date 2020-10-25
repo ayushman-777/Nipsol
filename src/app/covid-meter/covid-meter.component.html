@@ -28,7 +28,7 @@
         </thead>
         <tbody>
         <tr *ngFor="let stat of stats; let i = index;">
-            <td>{{moment.utc(stat.Date).format('MM/DD/YYYY')}}</td>
+            <td>{{stat.Date}}</td>
             <td>{{stat.Confirmed}}</td>
             <td>{{stat.Active}}</td>
             <td>{{stat.Recovered}}</td>
