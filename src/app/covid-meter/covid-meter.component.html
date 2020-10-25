@@ -1,1 +1,11 @@
-<p>covid-meter works!</p>
+<label for="cars">Choose a car:</label>
+
+<select id="cars">
+
+    <option *ngFor="let country of Countries" value="{{country}}">{{country}}</option>
+
+</select>
+
+<p>{{TotalCases.TotalConfirmed}}</p>
+<p>{{TotalCases.TotalDeaths}}</p>
+<p>{{TotalCases.TotalRecovered}}</p>

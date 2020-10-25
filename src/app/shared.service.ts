@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
 import {FormGroup} from "@angular/forms";
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
+import {TotalCases} from "./httpContent/TotalCases";
+import {Countries} from "./httpContent/Countries";
 
 @Injectable({
   providedIn: 'root'
@@ -7,8 +11,11 @@ import {FormGroup} from "@angular/forms";
 export class SharedService {
 
   private userDetails: FormGroup[] = [];
+  private urlForCases = 'https://api.covid19api.com/world/total';
+  private urlForCountries = 'https://api.covid19api.com/countries';
+  private urlForCovidCase = 'https://api.covid19api.com/country/COUNTRY_SLUG';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   addDetails(details: FormGroup): void {
     this.userDetails.push(details);
@@ -17,4 +24,13 @@ export class SharedService {
   getDetails(): FormGroup[]{
     return this.userDetails;
   }
+
+  getTotalCases(): Observable<TotalCases>{
+    return this.http.get<TotalCases>(this.urlForCases);
+  }
+
+  getCountriesList(): Observable<Countries[]>{
+    return this.http.get<Countries[]>(this.urlForCountries);
+  }
+
 }

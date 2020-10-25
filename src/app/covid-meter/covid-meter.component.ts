@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SharedService} from "../shared.service";
 
 @Component({
   selector: 'app-covid-meter',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CovidMeterComponent implements OnInit {
 
-  constructor() { }
+  public TotalCases;
+  public Countries = [];
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
+    this.sharedService.getTotalCases().subscribe(data=>this.TotalCases = data);
+    this.sharedService.getCountriesList().subscribe(data=>this.Countries = data);
   }
 
 }

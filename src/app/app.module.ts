@@ -5,11 +5,11 @@ import { AppComponent } from './app.component';
 
 import {AppRoutingModule, routingComponents} from "./appRouting.module";
 import {DataService} from "./add-user/data.service";
-import { CovidMeterComponent } from './covid-meter/covid-meter.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [ AppComponent, routingComponents],
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule ],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule, HttpClientModule ],
   providers: [DataService],
   bootstrap:    [ AppComponent ]
 })
