@@ -27,7 +27,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let stat of stats | slice:stats.length-10:stats.length; let i = index;">
+        <tr *ngFor="let stat of stats | slice:stats.length-7:stats.length; let i = index;">
             <td class="casesTableFirst">{{stat.Date}}</td>
             <td class="casesTableFirst">{{stat.Confirmed}}</td>
             <td class="casesTableFirst">{{stat.Active}}</td>
