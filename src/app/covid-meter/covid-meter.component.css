@@ -1,0 +1,8 @@
+.selectBar {
+  display: flex;
+  flex-direction: row;
+}
+
+.selectBar > *{
+  margin: 10px;
+}

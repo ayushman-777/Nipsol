@@ -1,11 +1,13 @@
-<label for="cars">Choose a car:</label>
+<div class="selectBar">
+<label for="country">Select Country</label>
 
 <select id="cars">
 
-    <option *ngFor="let country of Countries" value="{{country}}">{{country}}</option>
+    <option *ngFor="let country of Countries" value="{{country.Country}}">{{country.Country}}</option>
 
 </select>
 
 <p>{{TotalCases.TotalConfirmed}}</p>
 <p>{{TotalCases.TotalDeaths}}</p>
 <p>{{TotalCases.TotalRecovered}}</p>
+</div>
