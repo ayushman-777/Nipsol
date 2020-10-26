@@ -11,6 +11,7 @@ export class CovidMeterComponent implements OnInit {
   public TotalCases:any;
   public Countries = [];
   public stats = [];
+  mySelect: any;
 
   constructor(private sharedService: SharedService) { }
 
@@ -20,8 +21,8 @@ export class CovidMeterComponent implements OnInit {
     this.sharedService.getCountryStats().subscribe(data=>this.stats = data);
   }
 
-  myselection(select: string){
-    this.sharedService.changeSelectCountry(select);
+  selectChange() {
+    this.sharedService.changeSelectCountry(this.mySelect);
+    this.sharedService.getCountryStats().subscribe(data=>this.stats = data);
   }
-
 }

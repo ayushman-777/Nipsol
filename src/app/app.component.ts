@@ -19,7 +19,6 @@ export class AppComponent implements OnInit {
     this.data.currUserName.subscribe(
       message => (this.currUserNameHome = message)
     );
-
   }
 
   newMessage(name: string) {
