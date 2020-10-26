@@ -8,5 +8,12 @@
   flex-flow: column wrap;
   justify-content: center;
   width: 70%;
+
+}
+
+.border {
+  border: 3x solid black;
+  border-radius: 5px;
+  box-shadow:10px 10px 0 rgb(192, 186, 186);
 }
 
