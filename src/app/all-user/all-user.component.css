@@ -1,7 +1,12 @@
-.custom{
+.custom {
   margin-left: 20px;
   margin-top: 20px;
   margin-right: 20px;
+  margin-bottom: 30px;
+  padding: 5%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 70%;
 }
+
